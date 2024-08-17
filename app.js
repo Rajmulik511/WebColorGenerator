@@ -1,6 +1,10 @@
 let generateColorBtn = document.querySelector("#generateColorBtn"); 
 let applyBackgroundBtn = document.querySelector("#applyBackgroundBtn"); 
 let generateTextColorBtn = document.querySelector("#generateTextColorBtn");
+let copyColorBtn = document.querySelector("#copyColorBtn");
+let copyTextBtn = document.querySelector("#copyTextColorBtn")
+
+
 
 // Event listener for the "Generate Color" button
 generateColorBtn.addEventListener("click", function() {
@@ -30,6 +34,17 @@ applyBackgroundBtn.addEventListener("click", function() {
     body.style.backgroundColor = h3.innerText; // Apply the color from the h3 text to the background
 });
 
+// Event listener for the "Copy Color" button
+copyColorBtn.addEventListener("click",function(){
+    let h3 = document.querySelectorAll(".change h3")[0];
+    copyToClipboard(h3.innerText);
+});
+// Event listener for the "Copy Text Color" button
+copyTextBtn.addEventListener("click",function(){
+    let h3 = document.querySelectorAll(".change h3")[1];
+    copyToClipboard(h3.innerText);
+});
+
 function getRandomColor() {
     let red = Math.floor(Math.random() * 255);
     let green = Math.floor(Math.random() * 255);
@@ -37,3 +52,11 @@ function getRandomColor() {
     
     return `rgb(${red}, ${green}, ${blue})`;
 }
+
+function copyToClipboard(text){
+    navigator.clipboard.writeText(text).then(()=>{
+        alert("RGB code copied to clipboard: " + text)
+    });
+}
+
+

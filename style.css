@@ -7,6 +7,7 @@ h1 {
     text-align: center;
     padding: 4px;
     background-color: #f1f1f1;
+    opacity: 80%;
 
 }
 button {
@@ -21,6 +22,10 @@ button:hover {
     color: white;
 }
 
+h2:hover{
+    color: blueviolet;
+}
+
 
 .colorBox {
     height: 100px;
@@ -31,7 +36,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 40px;
     border-radius: 8px;
 }
 
@@ -56,6 +61,15 @@ button:hover {
     justify-content: center;
     align-items: center;
     border-radius: 8px;
+}
+
+.copy-btn {
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #333;
 }
 
 footer{
