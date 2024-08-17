@@ -15,6 +15,8 @@ button {
     padding: 15px 30px; /* Increase the padding for a larger button */
     border-radius: 8px; /* Optional: Make the buttons have rounded corners */
     cursor: pointer; /* Change cursor to pointer when hovering over the button */
+    box-shadow: 3px 2px 2px grey;
+    border: none;
 }
 
 button:hover {
@@ -61,6 +63,7 @@ h2:hover{
     justify-content: center;
     align-items: center;
     border-radius: 8px;
+    box-shadow: 3px 2px 2px grey;
 }
 
 .copy-btn {
@@ -80,9 +83,9 @@ footer{
     font-size: 18px;
 }
 
-.heart-icon {
+/* .heart-icon {
     width: 20px;
     vertical-align: middle;
-}
+} */
 
 
